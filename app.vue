@@ -11,10 +11,14 @@ onMounted(() => {
   getCountries()
 })
 </script>
+
 <template>
-  <ul class="test">
-    <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
-  </ul>
+  <NuxtLayout>
+    <ul>
+      <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
+    </ul>
+  </NuxtLayout>
 </template>
+
 <style lang="scss" scoped>
 </style>

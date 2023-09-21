@@ -2,6 +2,9 @@ $backgroundColor: #0A0A0A;
 $fontColor: #FFFFFF;
 
 html, body {
+    width: 100%;
     background-color: $backgroundColor;
     color: $fontColor;
+    font-size: 24px !important;
+    font-family: 'Lexend', sans-serif !important;
 }
