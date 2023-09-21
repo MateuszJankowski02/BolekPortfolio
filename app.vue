@@ -14,9 +14,9 @@ onMounted(() => {
 
 <template>
   <NuxtLayout>
-    <ul>
-      <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
-    </ul>
+    <Home />
+    <About />
+    <Gallery />
   </NuxtLayout>
 </template>
 

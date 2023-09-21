@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <template>
     <div class="header">
         <div class="headerButtons">
@@ -13,22 +9,26 @@
     </div>
 </template>
 
+<script>
+
+</script>
+
 <style lang="scss" scoped>
     .header{
-        width: 100vw;
+        width: 100%;
         height: 5rem;
         background-color: rgba(wheat, 0.5);
         display: flex;
         
     }
     .headerButtons{
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 2.2rem;
         margin-inline: 3rem;
     }
 </style>
