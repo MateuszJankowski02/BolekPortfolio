@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/supabase'],
   css: [
-    "~/assets/styles/main.scss",
-    "~/assets/styles/reset.scss",
+    "~/assets/styles/style.scss",
   ],
 })

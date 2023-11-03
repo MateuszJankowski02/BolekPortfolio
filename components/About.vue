@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    @use "../assets/styles/mixin.scss" as *;
+    @use '../assets/styles/abstracts' as *;
     .about {
         background-color: green;
         @include section-size; 

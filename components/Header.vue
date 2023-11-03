@@ -14,12 +14,13 @@
 </script>
 
 <style lang="scss" scoped>
+    @use '../assets/styles/abstracts' as *;
     .header{
         width: 100%;
         height: 5rem;
         background-color: rgba(wheat, 0.5);
         display: flex;
-        
+        font-family: $lexend;
     }
     .headerButtons{
         width: 100%;

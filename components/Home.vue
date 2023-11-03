@@ -14,7 +14,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    @use "../assets/styles/mixin.scss" as *;
+    @use '../assets/styles/abstracts' as *;
     .home {
         background-color: blue;
         @include section-size;

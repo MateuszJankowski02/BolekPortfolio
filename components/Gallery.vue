@@ -21,7 +21,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    @use "../assets/styles/mixin.scss" as *;
+    @use '../assets/styles/abstracts' as *;
     .gallery {
         background-color: brown;
         @include grid-template-center;
