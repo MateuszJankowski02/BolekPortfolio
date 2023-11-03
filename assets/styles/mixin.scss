@@ -1,0 +1,26 @@
+@mixin grid-template-center{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 5% 90% 5%;
+}
+
+@mixin grid-content-center{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+@mixin section-size{
+    min-height: 100vh;
+    max-height: 200vh;
+    min-width: 50rem;
+    width: 100%;
+    padding-block:2rem;
+    overflow: hidden;
+}
+
+@mixin flex-center($flex-direction){
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: center;
+}
