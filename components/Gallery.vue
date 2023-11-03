@@ -1,5 +1,5 @@
 <template lang="">
-    <div class="gallery">
+    <div class="section">
         <div class="gallery-content">
             <h5>Gallery</h5>
             <div class="images">

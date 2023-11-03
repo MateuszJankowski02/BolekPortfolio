@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+
+.section{
+    background-color: black;
+    @include section-size; 
+    @include grid-template-center;
+    border-block: 2px white solid;
+}
