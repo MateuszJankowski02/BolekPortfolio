@@ -9,15 +9,6 @@
     grid-row: 2;
 }
 
-@mixin section-size{
-    min-height: 100vh;
-    max-height: 200vh;
-    min-width: 50rem;
-    width: 100%;
-    padding-block:2rem;
-    overflow: hidden;
-}
-
 @mixin flex-center($flex-direction){
     display: flex;
     flex-direction: $flex-direction;

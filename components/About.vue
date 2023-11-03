@@ -1,9 +1,9 @@
 <template lang="">
     <div class="section">
         <div class="about-content">
-            <h5>About Me</h5>
+            <h5 class="section-heading">About Me</h5>
             <div class="image-placeholder"></div>
-            <div>
+            <div class="about-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia efficitur feugiat. 
                    Phasellus bibendum arcu ex, eu imperdiet massa viverra sed. Nunc facilisis lorem urna. 
                    Sed a facilisis purus. Praesent convallis varius orci ut tristique. Maecenas at pulvinar enim, a imperdiet neque. 
@@ -42,5 +42,13 @@ export default {
         width: 50%;
         min-height: 20rem;
         background-color: gray;
+    }
+    .about-text > p{
+        font-family: $lexend;
+        min-width: 2px;
+        font-size: 0.9rem;
+        text-align: justify;
+        padding: .5rem;
+        letter-spacing: .01rem;
     }
 </style>

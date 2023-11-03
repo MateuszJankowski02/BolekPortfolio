@@ -1,7 +1,7 @@
 <template lang="">
     <div class="section">
         <div class="gallery-content">
-            <h5>Gallery</h5>
+            <h5 class="section-heading">Gallery</h5>
             <div class="images">
                 <div class="image-placeholder"></div>
                 <div class="image-placeholder"></div>
@@ -22,12 +22,6 @@ export default {
 </script>
 <style lang="scss" scoped>
     @use '../assets/styles/abstracts' as *;
-    .gallery {
-        background-color: brown;
-        @include grid-template-center;
-        @include section-size;
-        width: 100%;
-    }
     .gallery-content{
         @include grid-content-center;
         @include flex-center(column);

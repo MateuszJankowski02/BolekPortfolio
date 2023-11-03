@@ -16,6 +16,8 @@
 <style lang="scss" scoped>
     @use '../assets/styles/abstracts' as *;
     .header{
+        position: absolute;
+        min-width: 50rem;
         width: 100%;
         height: 5rem;
         background-color: rgba(wheat, 0.5);

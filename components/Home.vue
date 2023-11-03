@@ -15,12 +15,6 @@ export default {
 </script>
 <style lang="scss" scoped>
     @use '../assets/styles/abstracts' as *;
-    .home {
-        background-color: blue;
-        @include section-size;
-        @include grid-template-center;
-        
-    }
     .home-content{
         @include grid-content-center;
         @include flex-center(column);
