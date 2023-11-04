@@ -1,6 +1,6 @@
 <template lang="">
     <div class="section">
-        <div class="gallery-content">
+        <div class="section-content-column">
             <h5 class="section-heading">Gallery</h5>
             <div class="images">
                 <div class="image-placeholder"></div>
@@ -22,9 +22,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     @use '../assets/styles/abstracts' as *;
-    .gallery-content{
-        @include grid-content-center;
-        @include flex-center(column);
+    .section-content-column{
         justify-content: space-between;
     }
     .images{

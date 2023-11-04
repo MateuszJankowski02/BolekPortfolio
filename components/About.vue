@@ -1,6 +1,6 @@
 <template lang="">
     <div class="section">
-        <div class="about-content">
+        <div class="section-content-column">
             <h5 class="section-heading">About Me</h5>
             <div class="image-placeholder"></div>
             <div class="about-text">
@@ -33,11 +33,6 @@ export default {
 </script>
 <style lang="scss" scoped>
     @use '../assets/styles/abstracts' as *;
-    .about-content{
-        @include grid-content-center;
-        @include flex-center(column);
-        row-gap: 2rem;
-    }
     .image-placeholder{
         width: 50%;
         min-height: 20rem;

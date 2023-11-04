@@ -17,6 +17,7 @@ onMounted(() => {
     <Home />
     <About />
     <Gallery />
+    <Contact />
   </NuxtLayout>
 </template>
 

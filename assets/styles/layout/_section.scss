@@ -10,3 +10,16 @@
     @include grid-template-center;
     border-block: 2px white solid;
 }
+
+.section-content-column, .section-content-row{
+    @include grid-content-center;
+    row-gap: 2rem;
+}
+
+.section-content-column{
+    @include flex-center(column);
+}
+
+.section-content-row{
+    @include flex-center(row);
+}
