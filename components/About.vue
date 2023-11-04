@@ -40,10 +40,9 @@ export default {
     }
     .about-text > p{
         font-family: $lexend;
-        min-width: 2px;
-        font-size: 0.9rem;
+        font-size: .7rem;
         text-align: justify;
-        padding: .5rem;
+        padding-block: .3rem;
         letter-spacing: .01rem;
     }
 </style>
