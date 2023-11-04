@@ -17,10 +17,10 @@
     @use '../assets/styles/abstracts' as *;
     .header{
         position: absolute;
-        min-width: 50rem;
         width: 100%;
         height: 5rem;
-        background-color: rgba(wheat, 0.5);
+        padding-inline: 1rem;
+        //background-color: rgba(wheat, 0.5);
         display: flex;
         font-family: $lexend;
     }
@@ -28,10 +28,9 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
-        gap: 2.2rem;
-        margin-inline: 3rem;
+        gap: clamp(1rem,4vw,3rem);
     }
 </style>
