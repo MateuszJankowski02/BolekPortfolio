@@ -8,9 +8,6 @@
                 <div class="image-placeholder"></div>
                 <div class="image-placeholder"></div>
                 <div class="image-placeholder"></div>
-                <div class="image-placeholder"></div>
-                <div class="image-placeholder"></div>
-                <div class="image-placeholder"></div>
             </div>
         </div>
     </div>
@@ -23,20 +20,39 @@ export default {
 <style lang="scss" scoped>
     @use '../assets/styles/abstracts' as *;
     .section-content-column{
-        justify-content: space-between;
+        @include flex-center(column);
+        gap: 2rem;
     }
     .images{
-        width: 80%;
-        height: 80%;
+      width: 100%;
         display: grid;
-        grid-template-rows: repeat(2, 50%);
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+        justify-items: center;
+    }
+    .image-placeholder{
+        width: 80%;
+        height: 300px;
+        background-color: green;
+    }
+    .image-placeholder:nth-child(1){
+      scale: 0.8;
+      opacity: 50%;
+    }
+    .image-placeholder:nth-child(2){
+      scale: 0.9;
+      opacity: 75%;
+    }
+    .image-placeholder:nth-child(3){
+      scale: 1.0;
+    }
+    .image-placeholder:nth-child(4){
+      scale: 0.9;
+      opacity: 75%;
+    }
+    .image-placeholder:nth-child(5){
+      scale: 0.8;
+      opacity: 50%;
     }
 
-    .image-placeholder{
-        width: 70%;
-        height: 80%;
-        background-color: gray;
-        justify-self: center;
-    }
 </style>
