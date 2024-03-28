@@ -1,3 +1,8 @@
+<script>
+  export default {
+
+  }
+</script>
 <template>
     <div class="header">
         <div class="headerButtons">
@@ -8,11 +13,6 @@
         </div>
     </div>
 </template>
-
-<script>
-
-</script>
-
 <style lang="scss" scoped>
     @use '../assets/styles/abstracts' as *;
     .header{

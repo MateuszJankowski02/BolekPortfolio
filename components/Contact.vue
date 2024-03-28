@@ -1,3 +1,8 @@
+<script>
+  export default {
+
+  }
+</script>
 <template>
     <div class="section">
         <div class="contact-wrapper">
@@ -26,10 +31,6 @@
         </div>
     </div>
 </template>
-
-<script>
-</script>
-
 <style lang="scss" scoped>
 @use '../assets/styles/abstracts' as *;
 
@@ -41,7 +42,7 @@
     line-height: 1.6rem;
     @media (max-width: 500px) {
         grid-template-rows: 1fr 7fr 7fr;
-        grid-template-columns: 1;
+        grid-template-columns: 1fr;
         .section-heading{
         grid-column-start: 1;
         grid-column-end: span 1;

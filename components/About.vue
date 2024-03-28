@@ -1,4 +1,9 @@
-<template lang="">
+<script>
+  export default {
+
+  }
+</script>
+<template>
     <div class="section">
         <div class="section-content-column">
             <h5 class="section-heading">About Me</h5>
@@ -26,11 +31,6 @@
         </div>
     </div>
 </template>
-<script>
-export default {
-    
-}
-</script>
 <style lang="scss" scoped>
     @use '../assets/styles/abstracts' as *;
     .image-placeholder{
