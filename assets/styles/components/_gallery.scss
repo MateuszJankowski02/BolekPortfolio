@@ -27,3 +27,6 @@
 .list-move {
   transition: transform 500ms, opacity 500ms;
 }
+.list-enter-active, .list-leave-active {
+  transition: transoft 500ms, opacity 500ms;
+}
