@@ -1,34 +1,34 @@
 <script setup>
 const images = reactive([
   {
-    id: "1",
-    content: "Image1",
-    scale: 0.8,
-    opacity: 0.5
+    "id": 1,
+    "content": "Image1",
+    "scale": 0.8,
+    "opacity": 0.5
   },
   {
-    id: "2",
-    content: "Image2",
-    scale: 0.9,
-    opacity: 0.75
+    "id": 2,
+    "content": "Image2",
+    "scale": 0.9,
+    "opacity": 0.75
   },
   {
-    id: "3",
-    content: "Image3",
-    scale: 1.0,
-    opacity: 1
+    "id": 3,
+    "content": "Image3",
+    "scale": 1.0,
+    "opacity": 1
   },
   {
-    id: "4",
-    content: "Image4",
-    scale: 0.9,
-    opacity: 0.75
+    "id": 4,
+    "content": "Image4",
+    "scale": 0.9,
+    "opacity": 0.75
   },
   {
-    id: "5",
-    content: "Image5",
-    scale: 0.8,
-    opacity: 0.5
+    "id": 5,
+    "content": "Image5",
+    "scale": 0.8,
+    "opacity": 0.5
   }
 ]);
 
@@ -79,33 +79,5 @@ const swapElements = function() {
     </div>
 </template>
 <style lang="scss" scoped>
-    @use '../assets/styles/abstracts' as *;
-    .section-content-column{
-        @include flex-center(column);
-        gap: 2rem;
-    }
-
-    .images{
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      justify-items: center;
-    }
-
-    .image-placeholder{
-        width: 80%;
-        height: 300px;
-        background-color: green;
-        transition: transform 500ms, opacity 500ms;
-    }
-    .image-placeholder-wrapper{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .list-move {
-      transition: transform 500ms, opacity 500ms;
-    }
 
 </style>
