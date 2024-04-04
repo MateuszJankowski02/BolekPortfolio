@@ -46,49 +46,37 @@ const images = reactive([
 
 const isAnimating = ref(false);
 
-const swapElements = function() {
+const swapLeft = function() {
   if (isAnimating.value) return;
   isAnimating.value = true;
   console.log(images);
   images.forEach((image, index) => {
-    /*
-    if (index === 3 || index === 4) {
+    if (index === 2 || index === 6) {
       image.scale = 0.8;
       image.opacity = 0.5;
-    } else if (index === 0 || index === 2) {
+    }else if(index === 3 || index === 5) {
       image.scale = 0.9;
       image.opacity = 0.75;
-    } else if (index === 1) {
-      image.scale = 1.0;
-      image.opacity = 1;
-    }
-     */
-    if (index === 0 || index === 4){
-      image.scale = 0.9;
-      image.opacity = 0.75;
-    }else if(index === 1 || index === 3) {
+    }else if(index === 4){
       image.scale = 1;
       image.opacity = 1;
-    }else if(index === 2){
-      image.scale = 0.9;
-      image.opacity = 0.75;
-    }else if(images.length - 1) {
-      image.scale = 0.8;
-      image.opacity = 0.5;
-    }else{
+    }else {
       image.scale = 0;
       image.opacity = 0;
     }
   });
-  images.unshift(...images.splice(-1));
+  images.push(...images.splice(0, 1));
   setTimeout(() => {
     isAnimating.value = false;
   }, 500);
 };
 
-const initializeElements = function() {
+const swapRight = function() {
+  if (isAnimating.value) return;
+  isAnimating.value = true;
+  console.log(images);
   images.forEach((image, index) => {
-    if (index === 0 || index === 4){
+    if (index === 0 || index === 4) {
       image.scale = 0.8;
       image.opacity = 0.5;
     }else if(index === 1 || index === 3) {
@@ -101,7 +89,28 @@ const initializeElements = function() {
       image.scale = 0;
       image.opacity = 0;
     }
+  });
+  images.unshift(...images.splice(-1));
+  setTimeout(() => {
+    isAnimating.value = false;
+  }, 500);
+};
 
+const initializeElements = function() {
+  images.forEach((image, index) => {
+    if (index === 1 || index === 5) {
+      image.scale = 0.8;
+      image.opacity = 0.5;
+    }else if(index === 2 || index === 4) {
+      image.scale = 0.9;
+      image.opacity = 0.75;
+    }else if(index === 3){
+      image.scale = 1;
+      image.opacity = 1;
+    }else {
+      image.scale = 0;
+      image.opacity = 0;
+    }
   });
 };
 
@@ -113,21 +122,26 @@ onMounted(() => {
     <div class="section">
         <div class="section-content-column">
             <h5 class="section-heading">Gallery</h5>
-            <transition-group name="list" tag="div" class="images">
+            <div class="images-wrapper">
+              <transition-group name="list" tag="div" class="images">
 
-              <div
-                  v-for="image in images.slice(0, 5)"
-                  :key="image.id"
-                  class="image-placeholder-wrapper"
-              >
-                <div class="image-placeholder" :style="[{opacity: image.opacity, transform: `scale(${image.scale})`}]">
-                  <p>Image id: {{ image.id }}</p>
-                  <p>Opacity : {{ image.opacity }}</p>
-                  <p>Scale   : {{ image.scale }}</p>
+                <div
+                    v-for="image in images.slice(0, 7)"
+                    :key="image.id"
+                    class="image-placeholder-wrapper"
+                >
+                  <div class="image-placeholder" :style="[{opacity: image.opacity, transform: `scale(${image.scale})`}]">
+                    <p>Image id: {{ image.id }}</p>
+                    <p>Opacity : {{ image.opacity }}</p>
+                    <p>Scale   : {{ image.scale }}</p>
+                  </div>
                 </div>
-              </div>
-            </transition-group>
-          <Button buttonTitle="Home" @click="swapElements"/>
+              </transition-group>
+            </div>
+          <div class="gallery-icons-wrapper">
+            <Icon name="ic:outline-double-arrow" color="white" size="50" @click="swapRight" class="gallery-icon"/>
+            <Icon name="ic:outline-double-arrow" color="white" size="50" @click="swapLeft" class="gallery-icon"/>
+          </div>
         </div>
     </div>
 </template>
