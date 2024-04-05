@@ -125,9 +125,7 @@ onMounted(() => {
         <div class="section-content-column">
             <h5 class="section-heading">Gallery</h5>
             <div class="temp">
-              <Cardset style="transform: translateY(100px)"/>
               <Cardset />
-              <Cardset style="transform: translateY(100px)"/>
             </div>
             <div class="images-wrapper" style="display: none">
               <transition-group name="list" tag="div" class="images">

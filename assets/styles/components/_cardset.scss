@@ -13,53 +13,55 @@
 
 .card{
   position: absolute;
-  display: block;
   width: 100%;
   height: 100%;
-  background-color: red;
   opacity: 1;
-  border: 1.5px groove white;
   border-radius: 7%;
-  /*
+  transition: transform $transitionTime ease-out;
+  padding: 1px;
+  box-shadow: 0 0 6px 6px rgba(0,0,0,0.6);
   &:nth-child(1) {
     //background-color: blue;
-    transform: rotate(-60deg) translateX(-16%) translateY(-26%);
+    transform: rotate(-60deg) translateX(-16%);
   }
   &:nth-child(2){
     //background-color: green;
-    transform: rotate(-45deg) translateX(-12%) translateY(-19%);
+    transform: rotate(-45deg) translateX(-12%);
   }
   &:nth-child(3){
     //background-color: yellow;
-    transform: rotate(-30deg) translateX(-8%) translateY(-13%);
+    transform: rotate(-30deg) translateX(-8%);
   }
   &:nth-child(4){
     //background-color: purple;
-    transform: rotate(-15deg) translateX(-4%) translateY(-7%);
+    transform: rotate(-15deg) translateX(-4%);
   }
   &:nth-child(5){
     //background-color: orange;
     transform: rotate(-0deg);
   }
-   */
-  &:nth-child(1) {
-    //background-color: blue;
-    transform: rotate(-60deg) translateX(-16%) translateY(-0%);
-  }
-  &:nth-child(2){
-    //background-color: green;
-    transform: rotate(-45deg) translateX(-12%) translateY(-0%);
-  }
-  &:nth-child(3){
-    //background-color: yellow;
-    transform: rotate(-30deg) translateX(-8%) translateY(-0%);
-  }
-  &:nth-child(4){
-    //background-color: purple;
-    transform: rotate(-15deg) translateX(-4%) translateY(-0%);
-  }
-  &:nth-child(5){
-    //background-color: orange;
-    transform: rotate(-0deg);
-  }
+}
+
+.list-move{
+  transition: transform $transitionTime ease-in-out;
+}
+
+.list-enter-from{
+  opacity: 0;
+}
+.list-enter-active{
+  transition: opacity $transitionTime ease-out
+}
+.list-enter-to{
+  opacity: 1;
+}
+.list-leave-from{
+  transform: rotate(0deg) translateX(0%);
+}
+.list-leave-active{
+  transition: all $transitionTime - 250 cubic-bezier(.21,.94,.59,.94);
+}
+.list-leave-to{
+  opacity: 0;
+  transform: rotate(15deg) translateX(100%);
 }
