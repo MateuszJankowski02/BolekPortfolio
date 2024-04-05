@@ -1,4 +1,6 @@
 <script setup>
+import Cardset from "~/components/Cardset.vue";
+
 const images = reactive([
   {
     "id": 1,
@@ -122,7 +124,12 @@ onMounted(() => {
     <div class="section">
         <div class="section-content-column">
             <h5 class="section-heading">Gallery</h5>
-            <div class="images-wrapper">
+            <div class="temp">
+              <Cardset style="transform: translateY(100px)"/>
+              <Cardset />
+              <Cardset style="transform: translateY(100px)"/>
+            </div>
+            <div class="images-wrapper" style="display: none">
               <transition-group name="list" tag="div" class="images">
 
                 <div
@@ -139,12 +146,20 @@ onMounted(() => {
               </transition-group>
             </div>
           <div class="gallery-icons-wrapper">
-            <Icon name="ic:outline-double-arrow" color="white" size="50" @click="swapRight" class="gallery-icon"/>
-            <Icon name="ic:outline-double-arrow" color="white" size="50" @click="swapLeft" class="gallery-icon"/>
+            <Icon name="ic:outline-double-arrow" style="display: none" color="white" size="50" @click="swapRight" class="gallery-icon"/>
+            <Icon name="ic:outline-double-arrow" style="display: none" color="white" size="50" @click="swapLeft" class="gallery-icon"/>
           </div>
         </div>
     </div>
 </template>
 <style lang="scss" scoped>
-
+.temp{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 15%;
+  &:nth-child(1){
+    transform: translateY(-100px);
+  }
+}
 </style>
