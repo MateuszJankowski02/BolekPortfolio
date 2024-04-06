@@ -2,6 +2,7 @@
 
 html, body {
     width: 100%;
+    min-width: 320px;
     background-color: $backgroundColor;
     color: $fontColor;
     font-size: $fontBase !important;

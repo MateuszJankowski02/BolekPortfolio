@@ -1,4 +1,7 @@
 <script setup lang="ts">
+
+const phoneWidth = ref(0);
+
 const imageSrcs = reactive(
 ["/img_1.jpg",
       "/img_2.jpg",
@@ -52,11 +55,25 @@ const nextCard = function() {
   if (isAnimating.value) return;
   isAnimating.value = true;
   cards.unshift(...cards.splice(-1));
-  console.log(cards);
   setTimeout(() => {
     isAnimating.value = false;
   }, 1000);
 };
+
+const phoneNextCard = function() {
+  console.log(phoneWidth.value)
+  if (phoneWidth.value < 500) {
+    nextCard();
+  }
+};
+
+onMounted(() => {
+  phoneWidth.value = window.innerWidth;
+  window.addEventListener('resize', () => {
+    phoneWidth.value = window.innerWidth;
+  });
+});
+
 </script>
 
 <template>
@@ -67,9 +84,10 @@ const nextCard = function() {
           v-for="(item, index) in cards.slice(0, 5)"
           :key="item.id"
           class="card"
+          @click="phoneNextCard"
       />
     </transition-group>
-    <Icon name="mdi:arrow-right-bold-circle-outline" size="50" @click="nextCard" class="cardset-icon"/>
+    <Icon name="mdi:arrow-right-bold-circle-outline" @click="nextCard" class="cardset-icon"/>
   </div>
 </template>
 
