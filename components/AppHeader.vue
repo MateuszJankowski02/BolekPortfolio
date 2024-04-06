@@ -6,10 +6,10 @@
 <template>
     <div class="header">
         <div class="headerButtons">
-            <Button buttonTitle="Home" />
-            <Button buttonTitle="About" />
-            <Button buttonTitle="Gallery" />
-            <Button buttonTitle="Contact" />
+            <AppButton buttonTitle="Home" />
+            <AppButton buttonTitle="About" />
+            <AppButton buttonTitle="Gallery" />
+            <AppButton buttonTitle="Contact" />
         </div>
     </div>
 </template>

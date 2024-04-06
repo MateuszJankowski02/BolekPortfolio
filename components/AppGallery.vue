@@ -1,5 +1,5 @@
 <script setup>
-import Cardset from "~/components/Cardset.vue";
+import Cardset from "~/components/AppCardset.vue";
 
 const images = reactive([
   {
@@ -125,28 +125,8 @@ onMounted(() => {
         <div class="section-content-column">
             <h5 class="section-heading">Gallery</h5>
             <div class="temp">
-              <Cardset />
+              <AppCardset />
             </div>
-            <div class="images-wrapper" style="display: none">
-              <transition-group name="list" tag="div" class="images">
-
-                <div
-                    v-for="image in images.slice(0, 7)"
-                    :key="image.id"
-                    class="image-placeholder-wrapper"
-                >
-                  <div class="image-placeholder" :style="[{opacity: image.opacity, transform: `scale(${image.scale})`}]">
-                    <p>Image id: {{ image.id }}</p>
-                    <p>Opacity : {{ image.opacity }}</p>
-                    <p>Scale   : {{ image.scale }}</p>
-                  </div>
-                </div>
-              </transition-group>
-            </div>
-          <div class="gallery-icons-wrapper">
-            <Icon name="ic:outline-double-arrow" style="display: none" color="white" size="50" @click="swapRight" class="gallery-icon"/>
-            <Icon name="ic:outline-double-arrow" style="display: none" color="white" size="50" @click="swapLeft" class="gallery-icon"/>
-          </div>
         </div>
     </div>
 </template>

@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <Header />
+    <AppHeader />
     <div>
         <slot />
     </div>

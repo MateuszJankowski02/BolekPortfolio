@@ -17,10 +17,10 @@ onMounted(() => {
 
 <template>
   <NuxtLayout>
-    <Home />
-    <About />
-    <Gallery />
-    <Contact />
+    <AppHome />
+    <AppAbout />
+    <AppGallery />
+    <AppContact />
   </NuxtLayout>
 </template>
 
