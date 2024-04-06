@@ -69,7 +69,7 @@ const nextCard = function() {
           class="card"
       />
     </transition-group>
-    <Icon name="ic:outline-double-arrow" color="white" size="50" @click="nextCard" class="gallery-icon"/>
+    <Icon name="mdi:arrow-right-bold-circle-outline" size="50" @click="nextCard" class="cardset-icon"/>
   </div>
 </template>
 

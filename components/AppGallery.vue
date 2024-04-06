@@ -124,9 +124,7 @@ onMounted(() => {
     <div class="section">
         <div class="section-content-column">
             <h5 class="section-heading">Gallery</h5>
-            <div class="temp">
-              <AppCardset />
-            </div>
+            <AppCardset />
         </div>
     </div>
 </template>

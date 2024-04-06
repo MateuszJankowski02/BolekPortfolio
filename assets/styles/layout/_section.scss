@@ -1,8 +1,8 @@
 @use '../abstracts/index' as *;
 
 .section{
+    position: relative;
     background-color: black;
-    height: fit-content;
     min-height: 102vh;
     width: 100%;
     padding-block:5rem;
@@ -15,7 +15,12 @@
 
 .section-content-column, .section-content-row{
     @include grid-content-center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 2rem;
+    height: 100%;
 }
 
 .section-content-column{

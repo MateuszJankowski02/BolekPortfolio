@@ -1,7 +1,7 @@
 @mixin grid-template-center{
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 5% 90% 5%;
+    grid-template-rows: 1fr 8fr 1fr;
 }
 
 @mixin grid-content-center{

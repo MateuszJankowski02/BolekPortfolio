@@ -1,42 +1,59 @@
 @use '../abstracts/index' as *;
 
 .cardset-wrapper{
-  width: 200px;
-  height: 300px
+  width: 100%;
+  height: clamp(17rem, 2rem, 1000px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .cardset{
-    position: relative;
     width: 100%;
     height: 100%;
+    user-select: none;
+}
+
+.cardset-icon{
+  position: absolute;
+  height: 50px;
+  left: calc(50% - 25px);
+  top: calc(90% - 25px);
+  cursor: pointer;
+  transition: all 250ms linear;
+  border-radius: 50%;
+  user-select: none;
+    &:hover{
+      transition: all 250ms linear ;
+      color: limegreen;
+    }
 }
 
 .card{
   position: absolute;
-  width: 100%;
-  height: 100%;
+  left: calc(50% - 100px);
+  top: calc(40% - 150px);
+  width: 200px;
+  height: 300px;
   opacity: 1;
   border-radius: 7%;
   transition: transform $transitionTime ease-out;
   box-shadow: 0 0 6px 6px rgba(0,0,0,0.6);
   &:nth-child(1) {
-    //background-color: blue;
     transform: rotate(-60deg) translateX(-16%);
   }
   &:nth-child(2){
-    //background-color: green;
     transform: rotate(-45deg) translateX(-12%);
   }
   &:nth-child(3){
-    //background-color: yellow;
     transform: rotate(-30deg) translateX(-8%);
   }
   &:nth-child(4){
-    //background-color: purple;
     transform: rotate(-15deg) translateX(-4%);
   }
   &:nth-child(5){
-    //background-color: orange;
     transform: rotate(-0deg);
   }
 }
