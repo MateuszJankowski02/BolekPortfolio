@@ -32,17 +32,5 @@
     </div>
 </template>
 <style lang="scss" scoped>
-    @use '../assets/styles/abstracts' as *;
-    .image-placeholder{
-        width: 50%;
-        min-height: 20rem;
-        background-color: gray;
-    }
-    .about-text > p{
-        font-family: $lexend;
-        font-size: .7rem;
-        text-align: justify;
-        padding-block: .3rem;
-        letter-spacing: .01rem;
-    }
+
 </style>
