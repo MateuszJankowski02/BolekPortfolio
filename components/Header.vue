@@ -20,9 +20,9 @@
         width: 100%;
         height: 5rem;
         padding-inline: 1rem;
-        //background-color: rgba(wheat, 0.5);
         display: flex;
         font-family: $lexend;
+        z-index: 1000;
     }
     .headerButtons{
         width: 100%;
