@@ -14,38 +14,38 @@ const imageSrcs = reactive(
 const cards = reactive([{
   "id": 1,
   "src": imageSrcs[0],
-  "rotate": "0deg",
-  "translateX": "0deg",
+  // "rotate": "0deg",
+  // "translateX": "0deg",
 },
 {
   "id": 2,
   "src": imageSrcs[1],
-  "rotate": "0deg",
-  "translateX": "0deg",
+  // "rotate": "0deg",
+  // "translateX": "0deg",
 },
 {
   "id": 3,
   "src": imageSrcs[2],
-  "rotate": "0deg",
-  "translateX": "0deg",
+  // "rotate": "0deg",
+  // "translateX": "0deg",
 },
 {
   "id": 4,
   "src": imageSrcs[3],
-  "rotate": "0deg",
-  "translateX": "0deg",
+  // "rotate": "0deg",
+  //"translateX": "0deg",
 },
 {
   "id": 5,
   "src": imageSrcs[4],
-  "rotate": "0deg",
-  "translateX": "0deg",
+  //"rotate": "0deg",
+  //"translateX": "0deg",
 },
 {
   "id": 6,
   "src": imageSrcs[5],
-  "rotate": "0deg",
-  "translateX": "0deg",
+  //"rotate": "0deg",
+  //"translateX": "0deg",
 }
 ]);
 
