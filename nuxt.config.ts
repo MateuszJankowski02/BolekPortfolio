@@ -9,6 +9,15 @@ export default defineNuxtConfig({
     redirect: false,
   },
   image: {
-
+    provider: 'ipx',
+    presets: {
+      default: {
+        modifiers: {
+          format: 'jpg',
+          loader: 'lazy',
+          quality: 100,
+        },
+      },
+    }
   }
 })

@@ -1,9 +1,5 @@
-<script>
-export default {
-  props: {
-    buttonTitle: String,
-  }
-};
+<script setup>
+  const props = defineProps(['buttonTitle']);
 </script>
 <template>
     <div class="button">

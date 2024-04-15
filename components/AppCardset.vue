@@ -1,5 +1,9 @@
 <script setup lang="ts">
 
+const props = defineProps(['cards']);
+
+const imagesLoaded = ref(false);
+
 const phoneWidth = ref(0);
 
 const imageSrcs = reactive(
@@ -11,50 +15,13 @@ const imageSrcs = reactive(
       '/img_6.jpg'
       ]);
 
-const cards = reactive([{
-  "id": 1,
-  "src": imageSrcs[0],
-  // "rotate": "0deg",
-  // "translateX": "0deg",
-},
-{
-  "id": 2,
-  "src": imageSrcs[1],
-  // "rotate": "0deg",
-  // "translateX": "0deg",
-},
-{
-  "id": 3,
-  "src": imageSrcs[2],
-  // "rotate": "0deg",
-  // "translateX": "0deg",
-},
-{
-  "id": 4,
-  "src": imageSrcs[3],
-  // "rotate": "0deg",
-  //"translateX": "0deg",
-},
-{
-  "id": 5,
-  "src": imageSrcs[4],
-  //"rotate": "0deg",
-  //"translateX": "0deg",
-},
-{
-  "id": 6,
-  "src": imageSrcs[5],
-  //"rotate": "0deg",
-  //"translateX": "0deg",
-}
-]);
 
 const isAnimating = ref(false);
 
 const nextCard = function() {
   if (isAnimating.value) return;
   isAnimating.value = true;
-  cards.unshift(...cards.splice(-1));
+  props.cards.unshift(...props.cards.splice(-1));
   setTimeout(() => {
     isAnimating.value = false;
   }, 1000);
@@ -68,6 +35,17 @@ const phoneNextCard = function() {
 };
 
 onMounted(() => {
+  let loadedImagesCount = 0;
+  props.cards.forEach((card: any) => {
+    const img = new Image();
+    img.src = card.path;
+    img.onload = () => {
+      loadedImagesCount++;
+      if (loadedImagesCount === props.cards.length) {
+        imagesLoaded.value = true;
+      }
+    };
+  });
   phoneWidth.value = window.innerWidth;
   window.addEventListener('resize', () => {
     phoneWidth.value = window.innerWidth;
@@ -80,8 +58,8 @@ onMounted(() => {
   <div class="cardset-wrapper">
     <transition-group name="list" tag="div" class="cardset">
       <NuxtImg
-          :src="item.src"
-          v-for="(item, index) in cards.slice(0, 5)"
+          :src="item.path"
+          v-for="(item, index) in props.cards.slice(0, 5)"
           :key="item.id"
           class="card"
           @click="phoneNextCard"
