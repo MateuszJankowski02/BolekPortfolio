@@ -10,13 +10,32 @@ const { data: images, error } = await useAsyncData('images', async () => {
 });
 
 const logImages = function(){
-  console.log("123");
   console.log(images.value);
 }
 
+const signedURLs = reactive([]);
+
+const signedURLsCount = ref(0);
+const getSignedURL = async (image) => {
+  const { data, error } = await supabase.storage.from('images').createSignedUrl(image, 60);
+  if (error) {
+    throw error;
+  }
+  signedURLs[signedURLsCount.value] = data.signedUrl;
+  signedURLsCount.value++;
+};
+
+const getSignedURLs = async () => {
+  const promises = images.value.map(image => getSignedURL(image.name));
+  await Promise.all(promises);
+};
+
+const logSignedURLs = async function(){
+  await getSignedURLs();
+  console.log(signedURLs);
+}
 
 onMounted(() => {
-
 })
 </script>
 
@@ -24,7 +43,7 @@ onMounted(() => {
   <NuxtLayout>
     <div class="test">
       <h1>Supabase</h1>
-      <button @click="logImages()">click</button>
+      <button @click="logSignedURLs">click</button>
 
     </div>
     <AppHome />
