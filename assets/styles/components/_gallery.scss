@@ -1,58 +1,21 @@
 @use '../abstracts/index' as *;
+
 .section-content-column{
   @include flex-center(column);
   gap: 2rem;
 }
-.images-wrapper{
-  width: 100%;
-  //overflow: hidden;
-}
 
-.images{
-  position: relative;
-  width: 150%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  justify-items: center;
-  justify-content: center;
-}
-
-.image-placeholder{
-  width: 80%;
-  height: 300px;
-  background-color: green;
-  transition: transform $transitionTime ease-out, opacity $transitionTime ease-out;
-}
-.image-placeholder-wrapper{
-  width: 100%;
+.cardsets{
   display: flex;
-  flex-direction: row;
+  width: 100%;
   justify-content: center;
-}
-
-.list-move {
-  transition: transform $transitionTime ease-out, opacity $transitionTime ease-out;
-}
-
-.gallery-icons-wrapper{
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.gallery-icon{
+  gap: 15%;
   &:nth-child(1){
-    transform: rotate(180deg);
-    &:hover {
-      transform: rotate(180deg) scale(1.2);
-    }
+    transform: translateY(-100px);
   }
-  cursor: pointer;
-  &:hover{
-    transform: scale(1.2);
+  @media screen and (max-width: 1000px){
+    flex-direction: column;
+    gap: 2rem;
+
   }
-  transform: scale(1);
-  transition: transform 200ms;
 }

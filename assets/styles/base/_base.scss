@@ -8,6 +8,8 @@ html, body {
     font-size: $fontBase !important;
     text-shadow: 2px 2px 2px #0A0A0A !important;
     overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: none;
 }
 *{
     font-family: $leagueSpartan !important;

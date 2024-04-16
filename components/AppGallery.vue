@@ -1,6 +1,5 @@
 <script setup>
 
-
 const cardsPerSet = 7;
 const cardsetFolderNames = ['cardset1', 'cardset2', 'cardset3'];
 
@@ -25,20 +24,14 @@ onMounted(() => {
     <div class="section">
         <div class="section-content-column">
             <h5 class="section-heading">Gallery</h5>
-            <AppCardset :cards='cardsets[0]'/>
-            <AppCardset :cards='cardsets[1]'/>
-            <AppCardset :cards='cardsets[2]'/>
+            <div class="cardsets">
+              <AppCardset :cards='cardsets[0]'/>
+              <AppCardset :cards='cardsets[1]'/>
+              <AppCardset :cards='cardsets[2]'/>
+            </div>
         </div>
     </div>
 </template>
 <style lang="scss" scoped>
-.temp{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 15%;
-  &:nth-child(1){
-    transform: translateY(-100px);
-  }
-}
+
 </style>
