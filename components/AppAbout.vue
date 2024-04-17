@@ -4,7 +4,7 @@
   }
 </script>
 <template>
-    <div class="section">
+    <div class="section" id="about">
         <div class="section-content-column">
             <h5 class="section-heading">About Me</h5>
             <div class="image-placeholder"></div>

@@ -4,7 +4,7 @@
   }
 </script>
 <template>
-  <div class="section-wrapper home-wrapper">
+  <div class="section-wrapper home-wrapper" id="home">
     <div class="home-background-image"></div>
     <div class="section home">
         <div class="section-content-column">

@@ -21,7 +21,7 @@ onMounted(() => {
 });
 </script>
 <template>
-    <div class="section">
+    <div class="section" id="gallery">
         <div class="section-content-column">
             <h5 class="section-heading">Gallery</h5>
             <div class="cardsets">

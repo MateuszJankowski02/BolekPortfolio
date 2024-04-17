@@ -4,7 +4,7 @@
   }
 </script>
 <template>
-    <div class="section">
+    <div class="section" id="contact">
         <div class="contact-wrapper">
             <h5 class="section-heading">Contact Me</h5>
             <div class="contact-info-wrapper">
