@@ -2,7 +2,7 @@
 
 .cardset-wrapper{
   width: 100%;
-  height: clamp(17rem, 2rem, 1000px);
+  height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,32 +16,12 @@
     user-select: none;
 }
 
-.cardset-icon{
-  position: absolute;
-  height: 50px;
-  left: calc(50% - $iconSize/2);
-  top: calc(100% - $iconSize);
-  cursor: pointer;
-  transition: all 250ms linear;
-  border-radius: 50%;
-  user-select: none;
-  height: $iconSize;
-  width: $iconSize;
-    &:hover{
-      transition: all 250ms linear ;
-      color: limegreen;
-    }
-  @media screen and (max-width: 500px) {
-    display: none !important;
-  }
-}
-
 .card{
   position: absolute;
   left: calc(50% - $cardWidth/2);
   top: calc(40% - $cardHeight/2);
-  width: clamp(100px, 8rem, 300px);
-  height: clamp(150px, 12rem, 450px);
+  width: $cardWidth;
+  height: $cardHeight;
   opacity: 1;
   border-radius: 7%;
   transition: transform $transitionTime ease-out, opacity $transitionTime ease-out;

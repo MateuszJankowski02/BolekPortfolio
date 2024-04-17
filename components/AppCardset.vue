@@ -27,13 +27,6 @@ const nextCard = function() {
   }, 1000);
 };
 
-const phoneNextCard = function() {
-  console.log(phoneWidth.value)
-  if (phoneWidth.value < 500) {
-    nextCard();
-  }
-};
-
 onMounted(() => {
   let loadedImagesCount = 0;
   props.cards.forEach((card: any) => {
@@ -62,10 +55,9 @@ onMounted(() => {
           v-for="(item, index) in props.cards.slice(0, 6)"
           :key="item.id"
           class="card"
-          @click="phoneNextCard"
+          @click="nextCard"
       />
     </transition-group>
-    <Icon name="mdi:arrow-right-bold-circle-outline" @click="nextCard" class="cardset-icon"/>
   </div>
 </template>
 

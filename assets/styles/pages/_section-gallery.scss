@@ -1,0 +1,12 @@
+@use '../abstracts/index' as *;
+
+.section-gallery{
+  height: $gallerySectionHeight;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr;
+  @media screen and (max-width: $media-desktop + 200px){
+    grid-template-columns: 1fr 8fr 1fr;
+    height: $gallerySectionHeightSmall;
+  }
+}

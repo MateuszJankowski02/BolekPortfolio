@@ -21,8 +21,8 @@ onMounted(() => {
 });
 </script>
 <template>
-    <div class="section" id="gallery">
-        <div class="section-content-column">
+    <div class="section-gallery" id="gallery">
+        <div class="cardsets-wrapper">
             <div class="cardsets">
               <AppCardset :cards='cardsets[0]'/>
               <AppCardset :cards='cardsets[1]'/>

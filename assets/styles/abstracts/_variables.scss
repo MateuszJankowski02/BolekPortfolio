@@ -5,7 +5,11 @@ $fontColor: #FFFFFF;
 $transitionTime: 1000ms;
 
 //components/cardset
-$cardWidth: clamp(100px, 8rem, 300px);
-$cardHeight: clamp(150px, 12rem, 450px);
+$cardWidth: clamp(120px, 10rem, 300px);
+$cardHeight: clamp(180px, 15rem, 450px);
 
 $iconSize: clamp(25px, 2rem, 50px);
+
+//pages/section-gallery
+$gallerySectionHeight: clamp(10rem,100vh,70rem);
+$gallerySectionHeightSmall: clamp(60rem,140vh,80rem);
