@@ -23,7 +23,6 @@ onMounted(() => {
 <template>
     <div class="section" id="gallery">
         <div class="section-content-column">
-            <h5 class="section-heading">Gallery</h5>
             <div class="cardsets">
               <AppCardset :cards='cardsets[0]'/>
               <AppCardset :cards='cardsets[1]'/>

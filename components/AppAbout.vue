@@ -6,7 +6,6 @@
 <template>
     <div class="section" id="about">
         <div class="section-content-column">
-            <h5 class="section-heading">About Me</h5>
             <div class="image-placeholder"></div>
             <div class="about-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia efficitur feugiat. 

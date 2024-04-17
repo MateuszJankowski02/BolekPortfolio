@@ -6,7 +6,6 @@
 <template>
     <div class="section" id="contact">
         <div class="contact-wrapper">
-            <h5 class="section-heading">Contact Me</h5>
             <div class="contact-info-wrapper">
                 <div>
                     <p>Let's talk</p>
