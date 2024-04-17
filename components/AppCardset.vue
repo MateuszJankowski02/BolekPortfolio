@@ -59,7 +59,7 @@ onMounted(() => {
     <transition-group name="list" tag="div" class="cardset">
       <NuxtImg
           :src="item.path"
-          v-for="(item, index) in props.cards.slice(0, 5)"
+          v-for="(item, index) in props.cards.slice(0, 6)"
           :key="item.id"
           class="card"
           @click="phoneNextCard"

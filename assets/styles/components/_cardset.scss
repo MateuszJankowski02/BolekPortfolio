@@ -44,27 +44,33 @@
   height: clamp(150px, 12rem, 450px);
   opacity: 1;
   border-radius: 7%;
-  transition: transform $transitionTime ease-out;
+  transition: transform $transitionTime ease-out, opacity $transitionTime ease-out;
   box-shadow: 0 0 6px 6px rgba(0,0,0,0.6);
   &:nth-child(1) {
-    transform: rotate(-60deg) translateX(-16%);
+    transform: rotate(-75deg) translateX(-20%);
+    opacity: 0;
   }
-  &:nth-child(2){
-    transform: rotate(-45deg) translateX(-12%);
+  &:nth-child(2) {
+    transform: rotate(-60deg) translateX(-16%);
+    opacity: 1;
   }
   &:nth-child(3){
-    transform: rotate(-30deg) translateX(-8%);
+    transform: rotate(-45deg) translateX(-12%);
   }
   &:nth-child(4){
-    transform: rotate(-15deg) translateX(-4%);
+    transform: rotate(-30deg) translateX(-8%);
   }
   &:nth-child(5){
+    transform: rotate(-15deg) translateX(-4%);
+  }
+  &:nth-child(6){
     transform: rotate(-0deg);
+    opacity: 1;
   }
 }
 
 .list-move{
-  transition: transform $transitionTime ease-in-out;
+  transition: transform $transitionTime ease-in-out, opacity $transitionTime ease-in-out;
 }
 
 .list-enter-from{
@@ -74,7 +80,7 @@
   transition: opacity $transitionTime ease-out
 }
 .list-enter-to{
-  opacity: 1;
+  opacity: 0;
 }
 .list-leave-from{
   transform: rotate(0deg) translateX(0%);

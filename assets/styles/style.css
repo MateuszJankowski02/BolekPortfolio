@@ -122,7 +122,7 @@ input {
   justify-content: center;
   gap: clamp(1rem, 4vw, 3rem);
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .headerButtons {
     display: none;
   }
@@ -162,7 +162,7 @@ input {
 .cardsets:nth-child(1) {
   transform: translateY(-100px);
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 968px) {
   .cardsets {
     flex-direction: column;
     gap: 2rem;
@@ -215,27 +215,33 @@ input {
   height: clamp(150px, 12rem, 450px);
   opacity: 1;
   border-radius: 7%;
-  transition: transform 1000ms ease-out;
+  transition: transform 1000ms ease-out, opacity 1000ms ease-out;
   box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.6);
 }
 .card:nth-child(1) {
-  transform: rotate(-60deg) translateX(-16%);
+  transform: rotate(-75deg) translateX(-20%);
+  opacity: 0;
 }
 .card:nth-child(2) {
-  transform: rotate(-45deg) translateX(-12%);
+  transform: rotate(-60deg) translateX(-16%);
+  opacity: 1;
 }
 .card:nth-child(3) {
-  transform: rotate(-30deg) translateX(-8%);
+  transform: rotate(-45deg) translateX(-12%);
 }
 .card:nth-child(4) {
-  transform: rotate(-15deg) translateX(-4%);
+  transform: rotate(-30deg) translateX(-8%);
 }
 .card:nth-child(5) {
+  transform: rotate(-15deg) translateX(-4%);
+}
+.card:nth-child(6) {
   transform: rotate(0deg);
+  opacity: 1;
 }
 
 .list-move {
-  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
 }
 
 .list-enter-from {
@@ -247,7 +253,7 @@ input {
 }
 
 .list-enter-to {
-  opacity: 1;
+  opacity: 0;
 }
 
 .list-leave-from {
@@ -274,9 +280,10 @@ input {
   height: 100%;
   z-index: 1;
   background: url("/mainBG/bgWide.jpg") no-repeat center center fixed;
+  opacity: 0.7;
   background-size: cover;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .home-background-image {
     background: url("/mainBG/bgMobile.jpg") no-repeat center center fixed;
     background-size: cover;
