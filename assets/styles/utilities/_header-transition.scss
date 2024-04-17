@@ -1,0 +1,27 @@
+.headerTransition-enter-from{
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.headerTransition-enter-to{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.headerTransition-enter-active{
+    transition: all 0.5s;
+}
+
+.headerTransition-leave-from{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.headerTransition-leave-to{
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.headerTransition-leave-active{
+    transition: all 0.5s;
+}

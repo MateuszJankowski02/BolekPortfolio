@@ -29,14 +29,16 @@ onMounted(() => {
     <Transition name="sectionTransition">
       <div v-if="sectionTransition" class="section-transition"></div>
     </Transition>
-    <div class="header" v-if="!sectionTransition">
-        <div class="headerButtons">
-            <AppButton buttonTitle="Home" @click="scrollTo(home)"/>
-            <AppButton buttonTitle="About" @click="scrollTo(about)"/>
-            <AppButton buttonTitle="Gallery" @click="scrollTo(gallery)"/>
-            <AppButton buttonTitle="Contact" @click="scrollTo(contact)"/>
-        </div>
-    </div>
+    <Transition name="headerTransition">
+      <div class="header" v-if="!sectionTransition">
+          <div class="headerButtons">
+              <AppButton buttonTitle="Home" @click="scrollTo(home)"/>
+              <AppButton buttonTitle="About" @click="scrollTo(about)"/>
+              <AppButton buttonTitle="Gallery" @click="scrollTo(gallery)"/>
+              <AppButton buttonTitle="Contact" @click="scrollTo(contact)"/>
+          </div>
+      </div>
+    </Transition>
 </template>
 <style lang="scss" scoped>
 
