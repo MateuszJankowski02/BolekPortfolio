@@ -442,9 +442,53 @@ input {
 }
 
 .image-placeholder {
-  width: 50%;
-  min-height: 20rem;
-  background-color: gray;
+  height: 100%;
+  background: url("/aboutBG/aboutBG.jpg") no-repeat center center;
+  background-size: auto;
+  position: relative;
+}
+.image-placeholder::before {
+  content: "";
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  bottom: -5%;
+  right: -10%;
+}
+
+.aboutImageWrapper {
+  content: "";
+  position: relative;
+}
+.aboutImageWrapper::before {
+  content: "";
+  height: calc(clamp(200px, 20rem, 400px) / 2.5);
+  width: calc(clamp(200px, 20rem, 400px) / 2.5);
+  transform: rotate(-2deg);
+  position: absolute;
+  bottom: -5%;
+  right: -10%;
+  background-color: yellow;
+  border-radius: 5%;
+  opacity: 0.9;
+}
+.aboutImageWrapper::after {
+  content: "";
+  height: calc(clamp(200px, 20rem, 400px) / 2);
+  width: calc(clamp(200px, 20rem, 400px) / 2);
+  position: absolute;
+  top: -5%;
+  left: -10%;
+  background-color: yellow;
+  border-radius: 5%;
+  opacity: 0.9;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.aboutImage {
+  width: clamp(200px, 20rem, 400px);
+  border-radius: 5%;
 }
 
 .about-text > p {

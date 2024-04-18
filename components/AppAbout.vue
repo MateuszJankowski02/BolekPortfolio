@@ -6,7 +6,9 @@
 <template>
     <div class="section" id="about">
         <div class="section-content-column">
-            <div class="image-placeholder"></div>
+            <div class="aboutImageWrapper">
+              <NuxtImg src="/aboutBG/aboutBG.jpg" class="aboutImage"/>
+            </div>
             <div class="about-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia efficitur feugiat. 
                    Phasellus bibendum arcu ex, eu imperdiet massa viverra sed. Nunc facilisis lorem urna. 

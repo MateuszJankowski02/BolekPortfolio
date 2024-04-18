@@ -4,6 +4,9 @@ $fontColor: #FFFFFF;
 // components/gallery
 $transitionTime: 1000ms;
 
+//components/about
+$aboutImageWidth: clamp(200px, 20rem, 400px);
+
 //components/cardset
 $cardWidth: clamp(120px, 10rem, 300px);
 $cardHeight: clamp(180px, 15rem, 450px);
