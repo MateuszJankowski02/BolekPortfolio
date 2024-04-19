@@ -7,7 +7,7 @@
     <div class="section" id="about">
         <div class="section-content-column">
             <div class="aboutImageWrapper">
-              <NuxtImg src="/aboutBG/aboutBG.jpg" class="aboutImage"/>
+              <NuxtImg src="aboutBG/aboutBG.jpg" class="aboutImage"/>
             </div>
             <div class="about-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia efficitur feugiat. 

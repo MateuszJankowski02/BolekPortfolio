@@ -10,6 +10,31 @@
   position: relative;
 }
 
+.cardsets-wrapper{
+  @include grid-content-center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: $gallerySectionHeight;
+  @media screen and (max-width: $media-desktop + 200px){
+    min-height: $gallerySectionHeightSmall;
+  }
+}
+
+.cardsets{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15%;
+  @media screen and (max-width: $media-desktop + 200px){
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
 .cardset{
     width: 100%;
     height: 100%;

@@ -8,7 +8,7 @@ const generateCardsetPaths = (folderName, cardsPerSet) => {
   for (let i = 0; i < cardsPerSet; i++) {
     cardsetPaths.push({
       id: i,
-      path:`/${folderName}/${folderName}_${i}.jpg`}
+      path:`${folderName}/${folderName}_${i}.jpg`}
     );
   }
   return cardsetPaths;
