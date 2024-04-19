@@ -11,14 +11,10 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.2.0",
-    "@nuxtjs/supabase": "^1.1.0",
     "ipx": "^3.0.1",
     "nuxt": "^3.7.3",
     "nuxt-icon": "^0.6.10",
     "sass": "^1.67.0",
     "sass-loader": "^13.3.2"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.33.2"
   }
 }

@@ -5,9 +5,6 @@ export default defineNuxtConfig({
   css: [
     "~/assets/styles/style.scss",
   ],
-  supabase: {
-    redirect: false,
-  },
   image: {
     provider: 'ipx',
     presets: {
