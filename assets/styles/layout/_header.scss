@@ -16,10 +16,10 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem,4vw,3rem);
-  @media screen and (max-width: $media-tablet){
-    display: none;
+  @media screen and (max-width: $media-phone) {
+    justify-content: space-between;
   }
+  gap: clamp(1rem,4vw,3rem);
 }
 
 // MAKE A NICE LOOKING MENU BUTTON IN TOP RIGHT CORNER AND MENU FOR THE WHOLE SCREEN WHEN CLICKED
