@@ -3,8 +3,8 @@
 html, body {
     width: 100%;
     min-width: 320px;
-    background-color: $backgroundColor;
-    color: $fontColor;
+    background-color: $primaryColor;
+    color: $secondaryColor;
     font-size: $fontBase !important;
     text-shadow: 2px 2px 2px #0A0A0A !important;
     overflow-x: hidden;

@@ -32,10 +32,9 @@ onMounted(() => {
     <Transition name="headerTransition">
       <div class="header" v-if="!sectionTransition">
           <div class="headerButtons">
-              <AppButton buttonTitle="Home" @click="scrollTo(home)"/>
-              <AppButton buttonTitle="About" @click="scrollTo(about)"/>
-              <AppButton buttonTitle="Gallery" @click="scrollTo(gallery)"/>
-              <AppButton buttonTitle="Contact" @click="scrollTo(contact)"/>
+              <AppButton buttonTitle="About" @click="scrollTo(about)" class="headerButton"/>
+              <AppButton buttonTitle="Gallery" @click="scrollTo(gallery)" class="headerButton"/>
+              <AppButton buttonTitle="Contact" @click="scrollTo(contact)" class="headerButton"/>
           </div>
       </div>
     </Transition>

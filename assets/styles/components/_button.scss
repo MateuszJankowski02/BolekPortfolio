@@ -10,10 +10,6 @@
   letter-spacing: 2px;
   cursor: pointer;
   transition: all 100ms linear;
-  &:hover{
-    transform: rotate(1deg);
-    transition: all 100ms linear;
-  }
   &::before{
     z-index: -10;
     position: absolute;
@@ -22,5 +18,11 @@
     height: 100%;
     backdrop-filter: blur(2px);
     background-color: rgba(0,0,0,0.2);
+  }
+}
+.headerButton {
+  &:hover {
+    transform: rotate(-2deg);
+    transition: all 100ms linear;
   }
 }

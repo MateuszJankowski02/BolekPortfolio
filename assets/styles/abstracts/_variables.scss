@@ -1,5 +1,6 @@
-$backgroundColor: #0A0A0A;
-$fontColor: #FFFFFF;
+$primaryColor: #0A0A0A;
+$secondaryColor: #FFFFFF;
+$tertiaryColor: #ff8800;
 
 // components/gallery
 $transitionTime: 1000ms;
@@ -8,8 +9,8 @@ $transitionTime: 1000ms;
 $aboutImageWidth: clamp(200px, 20rem, 400px);
 
 //components/cardset
-$cardWidth: clamp(120px, 10rem, 300px);
-$cardHeight: clamp(180px, 15rem, 450px);
+$cardWidth: clamp(100px, 10rem, 300px);
+$cardHeight: calc($cardWidth * 1.33);
 
 $iconSize: clamp(25px, 2rem, 50px);
 
