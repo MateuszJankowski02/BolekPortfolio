@@ -1,0 +1,21 @@
+.headerBackToTop {
+  transition: transform 0.3s ease-in-out;
+}
+
+.headerBackToTopTransition-enter-active{
+  animation: backToTop 400ms linear;
+}
+
+.headerBackToTopTransition-leave-active{
+  animation: backToTop 400ms linear reverse;
+}
+
+
+@keyframes backToTop {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

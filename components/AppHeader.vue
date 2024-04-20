@@ -1,6 +1,7 @@
 <script setup>
 
 const sectionTransition = ref(false);
+const backToTopTransition = ref(false);
 
 const home = ref(null);
 const about = ref(null);
@@ -10,6 +11,7 @@ const contact = ref(null);
 const pastHome = ref(false);
 
 const scrollTo = (element, behavior) => {
+  document.body.style.pointerEvents = 'none';
 
   behavior === 'instant' ? sectionTransition.value = true : sectionTransition.value = false;
 
@@ -20,16 +22,28 @@ const scrollTo = (element, behavior) => {
         behavior: behavior
       });
       sectionTransition.value = false;
+
+      document.body.style.pointerEvents = 'auto';
     }, 500);
     return;
   }
 
+  if (backToTopTransition.value === true){
+   return;
+  }
+  console.log(backToTopTransition.value);
+  backToTopTransition.value = true;
   window.scrollTo({
     top: element.offsetTop,
     behavior: behavior
   });
+  setTimeout(() => {
+    backToTopTransition.value = false;
 
+    document.body.style.pointerEvents = 'auto';
+  }, 100)
 }
+
 onMounted(() => {
   home.value = document.getElementById('home');
   about.value = document.getElementById('about');
