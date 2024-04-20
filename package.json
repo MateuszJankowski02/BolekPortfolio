@@ -6,15 +6,24 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "css:build": "postcss assets/styles/style.css -o assets/styles/style.css",
+    "css:watch": "postcss assets/styles/style.css -o assets/styles/style.css --watch"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.2.0",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^6.1.2",
     "ipx": "^3.0.1",
     "nuxt": "^3.7.3",
     "nuxt-icon": "^0.6.10",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
     "sass": "^1.67.0",
     "sass-loader": "^13.3.2"
+  },
+  "dependencies": {
+    "postcss-scss": "^4.0.9"
   }
 }

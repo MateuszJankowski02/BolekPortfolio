@@ -7,21 +7,38 @@ const about = ref(null);
 const gallery = ref(null);
 const contact = ref(null);
 
-const scrollTo = (element) => {
-  sectionTransition.value = true;
-  setTimeout(() => {
-    window.scrollTo({
-      top: element.offsetTop,
-      behavior: 'instant'
-    });
-    sectionTransition.value = false;
-  }, 500);
+const pastHome = ref(false);
+
+const scrollTo = (element, behavior) => {
+
+  behavior === 'instant' ? sectionTransition.value = true : sectionTransition.value = false;
+
+  if (behavior === 'instant'){
+    setTimeout(() => {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: behavior
+      });
+      sectionTransition.value = false;
+    }, 500);
+    return;
+  }
+
+  window.scrollTo({
+    top: element.offsetTop,
+    behavior: behavior
+  });
+
 }
 onMounted(() => {
   home.value = document.getElementById('home');
   about.value = document.getElementById('about');
   gallery.value = document.getElementById('gallery');
   contact.value = document.getElementById('contact');
+
+  window.addEventListener('scroll', () => {
+    pastHome.value = window.scrollY > home.value.offsetHeight - 100;
+  });
 });
 
 </script>
@@ -29,14 +46,19 @@ onMounted(() => {
     <Transition name="sectionTransition">
       <div v-if="sectionTransition" class="section-transition"></div>
     </Transition>
+    <Transition name="headerBackToTopTransition">
+      <nav v-if="pastHome" class="headerBackToTop">
+        <Icon icon="arrow-up" @click="scrollTo(home, 'smooth')"/>
+      </nav>
+    </Transition>
     <Transition name="headerTransition">
-      <div class="header" v-if="!sectionTransition">
+      <nav class="header" v-if="!sectionTransition">
           <div class="headerButtons">
-              <AppButton buttonTitle="About" @click="scrollTo(about)" class="headerButton"/>
-              <AppButton buttonTitle="Gallery" @click="scrollTo(gallery)" class="headerButton"/>
-              <AppButton buttonTitle="Contact" @click="scrollTo(contact)" class="headerButton"/>
+              <AppButton buttonTitle="About" @click="scrollTo(about, 'instant')" class="headerButton"/>
+              <AppButton buttonTitle="Gallery" @click="scrollTo(gallery, 'instant')" class="headerButton"/>
+              <AppButton buttonTitle="Contact" @click="scrollTo(contact, 'instant')" class="headerButton"/>
           </div>
-      </div>
+      </nav>
     </Transition>
 </template>
 <style lang="scss" scoped>
