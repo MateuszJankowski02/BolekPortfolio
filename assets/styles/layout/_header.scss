@@ -22,20 +22,7 @@
   gap: clamp(1rem,4vw,3rem);
 }
 
-// MAKE A NICE LOOKING MENU BUTTON IN TOP RIGHT CORNER AND MENU FOR THE WHOLE SCREEN WHEN CLICKED
-.headerButtons-mobile{
-  @media screen and (min-width: 1000px) {
-    display: none;
-  }
-  display: flex;
-  width: 100%;
-  justify-content: right;
-  align-items: center;
-  gap: 1rem;
-}
-
 .header-router{
   color: inherit;
   text-decoration: none;
-
 }

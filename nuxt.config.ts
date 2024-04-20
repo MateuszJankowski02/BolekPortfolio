@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     "~/assets/styles/style.scss",
   ],
   image: {
-    provider: 'netlify',
+    provider: 'ipx',
     presets: {
       default: {
         modifiers: {

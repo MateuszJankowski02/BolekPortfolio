@@ -15,7 +15,7 @@ const scrollTo = (element) => {
       behavior: 'instant'
     });
     sectionTransition.value = false;
-  }, 1000);
+  }, 500);
 }
 onMounted(() => {
   home.value = document.getElementById('home');
