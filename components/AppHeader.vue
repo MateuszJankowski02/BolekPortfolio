@@ -1,7 +1,5 @@
 <script setup>
-
-const sectionTransition = ref(false);
-const backToTopTransition = ref(false);
+import { useScrollTo } from '../composables/useScrollTo';
 
 const home = ref(null);
 const about = ref(null);
@@ -10,39 +8,7 @@ const contact = ref(null);
 
 const pastHome = ref(false);
 
-const scrollTo = (element, behavior) => {
-  document.body.style.pointerEvents = 'none';
-
-  behavior === 'instant' ? sectionTransition.value = true : sectionTransition.value = false;
-
-  if (behavior === 'instant'){
-    setTimeout(() => {
-      window.scrollTo({
-        top: element.offsetTop,
-        behavior: behavior
-      });
-      sectionTransition.value = false;
-
-      document.body.style.pointerEvents = 'auto';
-    }, 500);
-    return;
-  }
-
-  if (backToTopTransition.value === true){
-   return;
-  }
-  console.log(backToTopTransition.value);
-  backToTopTransition.value = true;
-  window.scrollTo({
-    top: element.offsetTop,
-    behavior: behavior
-  });
-  setTimeout(() => {
-    backToTopTransition.value = false;
-
-    document.body.style.pointerEvents = 'auto';
-  }, 100)
-}
+const { scrollTo, sectionTransition } = useScrollTo();
 
 onMounted(() => {
   home.value = document.getElementById('home');
@@ -61,8 +27,8 @@ onMounted(() => {
       <div v-if="sectionTransition" class="section-transition"></div>
     </Transition>
     <Transition name="headerBackToTopTransition">
-      <nav v-if="pastHome" class="headerBackToTop">
-        <Icon icon="arrow-up" @click="scrollTo(home, 'smooth')"/>
+      <nav v-if="pastHome" class="headerBackToTop" @click="scrollTo(home, 'smooth')">
+        <Icon icon="arrow-up" />
       </nav>
     </Transition>
     <Transition name="headerTransition">
