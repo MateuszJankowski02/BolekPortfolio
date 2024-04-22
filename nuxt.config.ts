@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         default: {
           modifiers: {
             format: 'jpg',
-            loader: 'lazy',
+            loader: 'preload',
             quality: 100,
           },
         },
@@ -45,7 +45,7 @@ export default defineNuxtConfig({
         default: {
           modifiers: {
             format: 'jpg',
-            loader: 'lazy',
+            loader: 'preload',
             quality: 100,
           },
         },
