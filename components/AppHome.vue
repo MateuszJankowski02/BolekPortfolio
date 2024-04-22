@@ -1,7 +1,14 @@
-<script>
-  export default {
+<script setup>
+import { useScrollTo } from '../composables/useScrollTo';
 
-  }
+const { myScrollTo, sectionTransition } = useScrollTo();
+
+const about = ref(null);
+
+onMounted(() => {
+  about.value = document.getElementById('about');
+});
+
 </script>
 <template>
   <div class="section-wrapper home-wrapper" id="home">
@@ -11,7 +18,7 @@
             <h5 class="heading-1">Jakub Bolek</h5>
             <h4 class="heading-2">Automotive photographer</h4>
             <h2>I strive to create stunning visuals that showcase the essence and allure of cars.</h2>
-            <p>See more...</p>
+            <p class="home-seeMore" @click="myScrollTo(about, 'smooth')">See more...</p>
         </div>
     </div>
   </div>

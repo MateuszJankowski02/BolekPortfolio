@@ -4,7 +4,7 @@ export function useScrollTo() {
     const sectionTransition = ref(false);
     const backToTopTransition = ref(false);
 
-    const scrollTo = (element, behavior) => {
+    const myScrollTo = (element, behavior) => {
         document.body.style.pointerEvents = 'none';
 
         behavior === 'instant' ? sectionTransition.value = true : sectionTransition.value = false;
@@ -37,5 +37,5 @@ export function useScrollTo() {
         }, 100)
     }
 
-    return { scrollTo, sectionTransition, backToTopTransition };
+    return { myScrollTo, sectionTransition, backToTopTransition };
 }

@@ -8,7 +8,7 @@ const contact = ref(null);
 
 const pastHome = ref(false);
 
-const { scrollTo, sectionTransition } = useScrollTo();
+const { myScrollTo, sectionTransition } = useScrollTo();
 
 onMounted(() => {
   home.value = document.getElementById('home');
@@ -27,16 +27,16 @@ onMounted(() => {
       <div v-if="sectionTransition" class="section-transition"></div>
     </Transition>
     <Transition name="headerBackToTopTransition">
-      <nav v-if="pastHome" class="headerBackToTop" @click="scrollTo(home, 'smooth')">
+      <nav v-if="pastHome" class="headerBackToTop" @click="myScrollTo(home, 'smooth')">
         <Icon name="material-symbols:arrow-upward" />
       </nav>
     </Transition>
     <Transition name="headerTransition">
       <nav class="header" v-if="!sectionTransition">
           <div class="headerButtons">
-              <AppButton buttonTitle="About" @click="scrollTo(about, 'instant')" class="headerButton"/>
-              <AppButton buttonTitle="Gallery" @click="scrollTo(gallery, 'instant')" class="headerButton"/>
-              <AppButton buttonTitle="Contact" @click="scrollTo(contact, 'instant')" class="headerButton"/>
+              <AppButton buttonTitle="About" @click="myScrollTo(about, 'instant')" class="headerButton"/>
+              <AppButton buttonTitle="Gallery" @click="myScrollTo(gallery, 'instant')" class="headerButton"/>
+              <AppButton buttonTitle="Contact" @click="myScrollTo(contact, 'instant')" class="headerButton"/>
           </div>
       </nav>
     </Transition>
