@@ -9,8 +9,8 @@
     <div class="section home">
         <div class="section-content-column">
             <h5 class="heading-1">Jakub Bolek</h5>
-            <h4 class="heading-2">Car Photoshoot</h4>
-            <h2>Photographs capture a moment that’s gone forever, a moment impossible to reproduce</h2>
+            <h4 class="heading-2">Automotive photographer</h4>
+            <h2>I strive to create stunning visuals that showcase the essence and allure of cars.</h2>
             <p>See more...</p>
         </div>
     </div>

@@ -13,7 +13,7 @@
                 </div>
                 <div>
                     <p>Mail me at:</p>
-                    <p>Loremipsum@dolor.com</p>
+                    <p>j.bolek02@gmail.com</p>
                 </div>
             </div>
             <div class="contact-form-wrapper">
