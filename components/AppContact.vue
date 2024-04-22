@@ -24,6 +24,7 @@
                         <input type="text" id="email" name="email" placeholder="Email">
                         <input type="text" id="subject" name="subject" placeholder="Subject">
                         <textarea id="message" name="message" placeholder="What's on your mind?"></textarea>
+                        <AppButton buttonTitle="Send" class="contact-form-button" @click.prevent=""/>
                     </fieldset>
                 </form>
             </div>
