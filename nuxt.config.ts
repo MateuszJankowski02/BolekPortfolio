@@ -1,20 +1,55 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import autoprefixer from "autoprefixer";
+
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  modules: ['nuxt-icon', '@nuxt/image'],
-  css: [
-    "~/assets/styles/style.scss",
-  ],
-  image: {
-    provider: 'ipx',
-    presets: {
-      default: {
-        modifiers: {
-          format: 'jpg',
-          loader: 'lazy',
-          quality: 100,
+  $development: {
+    devtools: { enabled: true },
+    modules: ['nuxt-icon', '@nuxt/image'],
+    css: [
+      "~/assets/styles/style.scss",
+    ],
+    postcss: {
+      plugins: {
+        autoprefixer: {},
+        cssnano: {},
+      }
+    },
+    image: {
+      provider: 'ipx',
+      presets: {
+        default: {
+          modifiers: {
+            format: 'jpg',
+            loader: 'lazy',
+            quality: 100,
+          },
         },
-      },
+      }
     }
-  }
+  },
+  $production: {
+    devtools: { enabled: false },
+    modules: ['nuxt-icon', '@nuxt/image'],
+    css: [
+      "~/assets/styles/style.scss",
+    ],
+    postcss: {
+      plugins: {
+        autoprefixer: {},
+        cssnano: {},
+      }
+    },
+    image: {
+      provider: 'netlify',
+      presets: {
+        default: {
+          modifiers: {
+            format: 'jpg',
+            loader: 'lazy',
+            quality: 100,
+          },
+        },
+      }
+    }
+  },
 })
