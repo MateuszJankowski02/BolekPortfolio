@@ -32,9 +32,9 @@
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background-color: $secondaryColor;
+  background-color: $tertiaryColor;
   color: $secondaryColor;
-  border: none;
+  border: white 1px solid;
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
@@ -46,6 +46,6 @@
   transition: all 0.3s;
   z-index: 99;
   &:hover{
-    background-color: $tertiaryColor;
+    background-color: darken($tertiaryColor, 10%);
   }
 }

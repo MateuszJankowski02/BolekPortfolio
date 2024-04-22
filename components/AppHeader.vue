@@ -28,7 +28,7 @@ onMounted(() => {
     </Transition>
     <Transition name="headerBackToTopTransition">
       <nav v-if="pastHome" class="headerBackToTop" @click="scrollTo(home, 'smooth')">
-        <Icon icon="arrow-up" />
+        <Icon name="material-symbols:arrow-upward" />
       </nav>
     </Transition>
     <Transition name="headerTransition">
